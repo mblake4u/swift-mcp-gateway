@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pip-tools
+        run: pip install pip-tools
+
+      - name: Verify requirements.txt is in sync with requirements.in
+        run: |
+          pip-compile --generate-hashes --output-file requirements.check.txt requirements.in
+          diff requirements.txt requirements.check.txt || \
+            (echo "requirements.txt is out of sync — run pip-compile --generate-hashes" && exit 1)
+
+      - name: Install dependencies
+        run: pip install --require-hashes -r requirements.txt
+
+      - name: pip-audit (supply chain check)
+        run: |
+          pip install pip-audit
+          pip-audit -r requirements.txt
+
+      - name: Run smoke tests
+        run: python -m pytest tests/ -v
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t swift-mcp-gateway:ci .
