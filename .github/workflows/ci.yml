@@ -18,14 +18,18 @@ jobs:
       - name: Install pip-tools
         run: pip install pip-tools
 
-      - name: Verify requirements.txt is in sync with requirements.in
+      - name: Verify requirements files are in sync with their .in sources
         run: |
           pip-compile --generate-hashes --output-file requirements.check.txt requirements.in
-          diff requirements.txt requirements.check.txt || \
+          pip-compile --generate-hashes --output-file requirements-dev.check.txt requirements-dev.in
+          # Header line embeds the output filename and always differs by design.
+          diff -I 'pip-compile.*--output-file' requirements.txt requirements.check.txt || \
             (echo "requirements.txt is out of sync — run pip-compile --generate-hashes" && exit 1)
+          diff -I 'pip-compile.*--output-file' requirements-dev.txt requirements-dev.check.txt || \
+            (echo "requirements-dev.txt is out of sync — run pip-compile --generate-hashes" && exit 1)
 
       - name: Install dependencies
-        run: pip install --require-hashes -r requirements.txt
+        run: pip install --require-hashes -r requirements.txt -r requirements-dev.txt
 
       - name: pip-audit (supply chain check)
         run: |
