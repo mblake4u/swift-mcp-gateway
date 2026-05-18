@@ -1,0 +1,73 @@
+{
+  "timestamp_utc": "2026-05-18-101349",
+  "proxy_base_url": "http://localhost:82/proxy",
+  "bootstrap_distribution_id": null,
+  "per_tool": {
+    "list_distributions": {
+      "runs": 20,
+      "p50_ms": 17.0,
+      "p95_ms": 23.8,
+      "mean_ms": 26.5,
+      "min_ms": 15.2,
+      "max_ms": 199.4,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    },
+    "download_fin_messages": {
+      "runs": 20,
+      "p50_ms": 17.1,
+      "p95_ms": 18.6,
+      "mean_ms": 17.0,
+      "min_ms": 14.8,
+      "max_ms": 19.3,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    },
+    "download_interact_messages": {
+      "runs": 20,
+      "p50_ms": 17.7,
+      "p95_ms": 25.1,
+      "mean_ms": 19.1,
+      "min_ms": 15.2,
+      "max_ms": 43.1,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    }
+  },
+  "unprobed_tools": [
+    {
+      "tool": "ack_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "nak_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "send_fin_message",
+      "rationale": "Mutating \u2014 would emit real outbound MT messages."
+    },
+    {
+      "tool": "send_interact_message",
+      "rationale": "Mutating \u2014 would emit real outbound MX messages."
+    }
+  ],
+  "coverage": {
+    "exposed_tools": 10,
+    "total_endpoints_in_spec": 43,
+    "raw_coverage_pct": 23.3,
+    "fileact_endpoints_excluded": 8,
+    "adjusted_total_endpoints": 35,
+    "adjusted_coverage_pct": 28.6,
+    "note": "FileAct (8 endpoints) is intentionally excluded \u2014 see ADR-002. The remaining gap is operational/reporting endpoints (delivery reports, archives, exports, transmission reports, batch) not in v1 scope."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-05-18-093054",
+  "models": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "results": [
+    {
+      "case_id": "ts-001",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1527.609,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-002",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1003.0479999999999,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-003",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123-def"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1383.826,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    }
+  ],
+  "summary": {
+    "claude-haiku-4-5-20251001": {
+      "tool_selection": {
+        "pass": 3,
+        "total": 3,
+        "total_latency_ms": 3914.4829999999997,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 1304.8276666666666
+      },
+      "__overall__": {
+        "pass": 3,
+        "total": 3,
+        "pass_rate": 1.0
+      }
+    }
+  }
+}

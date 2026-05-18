@@ -1,0 +1,112 @@
+{
+  "timestamp_utc": "2026-05-18-115953",
+  "proxy_base_url": "http://172.23.151.161:82/proxy",
+  "bootstrap_distribution_id": "44984189498",
+  "per_tool": {
+    "list_distributions": {
+      "runs": 20,
+      "p50_ms": 1690.3,
+      "p95_ms": 1947.8,
+      "mean_ms": 1679.5,
+      "min_ms": 1124.9,
+      "max_ms": 1988.9,
+      "success_count": 20,
+      "status_codes": {
+        "200": 20
+      },
+      "errors": []
+    },
+    "get_distribution": {
+      "runs": 20,
+      "p50_ms": 1178.1,
+      "p95_ms": 2249.3,
+      "mean_ms": 1323.6,
+      "min_ms": 1040.7,
+      "max_ms": 2255.8,
+      "success_count": 20,
+      "status_codes": {
+        "200": 20
+      },
+      "errors": []
+    },
+    "download_fin_messages": {
+      "runs": 20,
+      "p50_ms": 1313.5,
+      "p95_ms": 2134.0,
+      "mean_ms": 1368.9,
+      "min_ms": 973.8,
+      "max_ms": 2228.5,
+      "success_count": 0,
+      "status_codes": {
+        "400": 20
+      },
+      "errors": []
+    },
+    "download_fin_message": {
+      "runs": 20,
+      "p50_ms": 1378.0,
+      "p95_ms": 3430.3,
+      "mean_ms": 1646.5,
+      "min_ms": 1065.5,
+      "max_ms": 4089.5,
+      "success_count": 20,
+      "status_codes": {
+        "200": 20
+      },
+      "errors": []
+    },
+    "download_interact_messages": {
+      "runs": 20,
+      "p50_ms": 1218.0,
+      "p95_ms": 1473.2,
+      "mean_ms": 1256.5,
+      "min_ms": 1012.1,
+      "max_ms": 1842.3,
+      "success_count": 0,
+      "status_codes": {
+        "400": 20
+      },
+      "errors": []
+    },
+    "download_interact_message": {
+      "runs": 20,
+      "p50_ms": 1377.1,
+      "p95_ms": 2769.9,
+      "mean_ms": 1521.6,
+      "min_ms": 1078.7,
+      "max_ms": 3176.1,
+      "success_count": 20,
+      "status_codes": {
+        "200": 20
+      },
+      "errors": []
+    }
+  },
+  "unprobed_tools": [
+    {
+      "tool": "ack_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "nak_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "send_fin_message",
+      "rationale": "Mutating \u2014 would emit real outbound MT messages."
+    },
+    {
+      "tool": "send_interact_message",
+      "rationale": "Mutating \u2014 would emit real outbound MX messages."
+    }
+  ],
+  "coverage": {
+    "exposed_tools": 10,
+    "total_endpoints_in_spec": 43,
+    "raw_coverage_pct": 23.3,
+    "fileact_endpoints_excluded": 8,
+    "adjusted_total_endpoints": 35,
+    "adjusted_coverage_pct": 28.6,
+    "note": "FileAct (8 endpoints) is intentionally excluded \u2014 see ADR-002. The remaining gap is operational/reporting endpoints (delivery reports, archives, exports, transmission reports, batch) not in v1 scope."
+  }
+}

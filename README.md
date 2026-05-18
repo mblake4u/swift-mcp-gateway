@@ -4,6 +4,10 @@ An MCP (Model Context Protocol) server that exposes **Swift Alliance Cloud Messa
 
 Part of the [SwiftOps](https://github.com/mblake4u/swiftops) open-source Swift API tooling stack.
 
+Ships with a **[published evaluation methodology](docs/ADR-003-eval-methodology.md)** (three orthogonal axes, multi-model harness with prompt caching at 96.7% hit ratio, 30-case hand-curated test set). See [`evals/`](evals/) and the [first baseline analysis](evals/results/2026-05-18-analysis.md).
+
+Current version: **v0.1.1-dev** ([fix](evals/results/2026-05-18-analysis.md) surfaced by the axis-3 probe).
+
 ---
 
 ## What it does
@@ -34,6 +38,28 @@ Claude ──(MCP tools)──► swift-mcp-gateway ──(HTTP)──► swift-
 - **Python 3.11** + [fastmcp](https://github.com/jlowin/fastmcp)
 - **Transport:** Streamable HTTP (MCP spec 2025-03-26) at `POST /mcp`
 - **Docker** — runs as a container on port 8080 (exposed as 85 in dev)
+
+## Quality & evaluation
+
+The gateway ships with a reproducible evaluation methodology — three orthogonal axes (tool-selection accuracy, argument fidelity, operational metrics) applied to multiple Claude models with prompt caching and LLM-as-judge for free-text args. The methodology is intentionally portable: only the test set is Swift-specific; the three axes generalise to any MCP gateway.
+
+- **Methodology write-up (Notion):** [Evaluating an MCP Gateway: A Methodology](https://www.notion.so/Evaluating-an-MCP-Gateway-A-Methodology-364aa5f988dd8038bb21d34880ca6eab) — recruiter-legible, ~1,900 words
+- **Methodology ADR:** [`docs/ADR-003-eval-methodology.md`](docs/ADR-003-eval-methodology.md)
+- **Harness:** [`evals/run_evals.py`](evals/run_evals.py) (axes 1+2), [`evals/probe.py`](evals/probe.py) (axis 3)
+- **Test set:** [`evals/test_set.jsonl`](evals/test_set.jsonl) — 30 hand-curated cases
+- **First baseline + five-cluster analysis:** [`evals/results/2026-05-18-analysis.md`](evals/results/2026-05-18-analysis.md)
+- **Raw results:** [`evals/results/`](evals/results/)
+
+Run yourself (~$5 in Anthropic API credits for both eval runs):
+
+```bash
+pip install -r requirements-evals.in
+export ANTHROPIC_API_KEY=sk-ant-...
+
+make eval                # latest each tier (opus-4-7 / sonnet-4-6 / haiku-4-5)
+make eval-matched-gen    # matched generation 4.5 control (fully pinned)
+make probe               # axis 3 latency + coverage against your live proxy
+```
 
 ## Quick start (Docker Compose)
 

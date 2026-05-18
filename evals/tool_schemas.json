@@ -1,0 +1,199 @@
+[
+  {
+    "name": "list_distributions",
+    "description": "List available distributions from Alliance Cloud.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "integer",
+          "description": "Maximum number of results to return (default 100).",
+          "default": 100
+        },
+        "offset": {
+          "type": "integer",
+          "description": "Pagination offset (default 0).",
+          "default": 0
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_distribution",
+    "description": "Retrieve a single distribution by ID.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The distribution ID returned by list_distributions."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "ack_distribution",
+    "description": "Acknowledge (ACK) a distribution, marking it as successfully processed.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The ID of the distribution to acknowledge."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "nak_distribution",
+    "description": "Negative-acknowledge (NAK) a distribution, rejecting it. Use this when a distribution is malformed, unsupported, or should not be processed.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The ID of the distribution to reject."
+        },
+        "reason": {
+          "type": "string",
+          "description": "Optional textual reason for the NAK (max 255 chars).",
+          "default": ""
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "download_fin_messages",
+    "description": "Download FIN (MT) messages for a specific distribution. The Swift API requires distribution_id; calls without it return 400. Use when the user asks for FIN messages tied to a specific distribution.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The distribution ID whose FIN messages should be downloaded. Required by the Swift API."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "download_fin_message",
+    "description": "Download a single FIN (MT) message by its distribution ID. Use when the user wants the actual message body for one specific distribution.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The distribution ID of the FIN message to download."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "send_fin_message",
+    "description": "Send a FIN (MT) message to Alliance Cloud. Use for outbound MT103, MT202, and other MT-format messages.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "sender_reference": {
+          "type": "string",
+          "description": "Unique back-office reference for reconciliation (max 70 chars). Must be unique per institution (UUMID)."
+        },
+        "message_type": {
+          "type": "string",
+          "description": "MT message type in format fin.<type>[.<variant>]. Examples: fin.103, fin.103.REMIT, fin.202, fin.202.COV"
+        },
+        "sender": {
+          "type": "string",
+          "description": "BIC12 of the sending institution (format: <BIC8><LT><branch>)."
+        },
+        "receiver": {
+          "type": "string",
+          "description": "BIC12 of the receiving institution."
+        },
+        "payload": {
+          "type": "string",
+          "description": "The MT message body (the block content as a string)."
+        }
+      },
+      "required": ["sender_reference", "message_type", "sender", "receiver", "payload"]
+    }
+  },
+  {
+    "name": "download_interact_messages",
+    "description": "Download InterAct (MX) messages for a specific distribution. The Swift API requires distribution_id; calls without it return 400. Use when the user asks for InterAct or MX messages tied to a specific distribution.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The distribution ID whose InterAct messages should be downloaded. Required by the Swift API."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "download_interact_message",
+    "description": "Download a single InterAct (MX) message by its distribution ID. Use when the user wants the message body for one specific InterAct distribution.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "distribution_id": {
+          "type": "string",
+          "description": "The distribution ID of the InterAct message to download."
+        }
+      },
+      "required": ["distribution_id"]
+    }
+  },
+  {
+    "name": "send_interact_message",
+    "description": "Send an InterAct (MX) message to Alliance Cloud. Use for outbound pacs.008, pain.001, camt.*, and other MX-format messages.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "sender_reference": {
+          "type": "string",
+          "description": "Unique back-office reference (max 70 chars)."
+        },
+        "service_code": {
+          "type": "string",
+          "description": "SWIFTNet service code (max 30 chars). Example: swift.cbprplus.02"
+        },
+        "message_type": {
+          "type": "string",
+          "description": "MX message type in format <area>.<type>.<variant>.<version>. Example: pacs.008.001.08, ifds.001.001.01"
+        },
+        "requestor": {
+          "type": "string",
+          "description": "Distinguished name (DN) of the sending party."
+        },
+        "responder": {
+          "type": "string",
+          "description": "Distinguished name (DN) of the receiving party."
+        },
+        "payload": {
+          "type": "string",
+          "description": "The MX message body (XML string)."
+        },
+        "usage_identifier": {
+          "type": "string",
+          "description": "Optional usage identifier for business validation rules.",
+          "default": ""
+        },
+        "format": {
+          "type": "string",
+          "description": "Optional message format (e.g. 'MX').",
+          "default": ""
+        }
+      },
+      "required": ["sender_reference", "service_code", "message_type", "requestor", "responder", "payload"]
+    }
+  }
+]

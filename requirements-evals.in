@@ -1,0 +1,6 @@
+# Eval-only dependencies. NOT installed in the gateway Docker image —
+# this is for running evals/run_evals.py locally.
+#
+# Install:  pip install -r requirements-evals.in
+#
+anthropic>=0.39

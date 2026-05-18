@@ -1,0 +1,73 @@
+{
+  "timestamp_utc": "2026-05-18-105556",
+  "proxy_base_url": "http://172.23.151.161:82/proxy",
+  "bootstrap_distribution_id": null,
+  "per_tool": {
+    "list_distributions": {
+      "runs": 20,
+      "p50_ms": 1843.7,
+      "p95_ms": 3026.4,
+      "mean_ms": 2006.4,
+      "min_ms": 1496.2,
+      "max_ms": 3523.4,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    },
+    "download_fin_messages": {
+      "runs": 20,
+      "p50_ms": 1930.1,
+      "p95_ms": 2698.9,
+      "mean_ms": 2008.5,
+      "min_ms": 1482.8,
+      "max_ms": 2814.5,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    },
+    "download_interact_messages": {
+      "runs": 20,
+      "p50_ms": 1895.0,
+      "p95_ms": 2171.7,
+      "mean_ms": 2006.8,
+      "min_ms": 1537.3,
+      "max_ms": 4352.7,
+      "success_count": 0,
+      "status_codes": {
+        "502": 20
+      },
+      "errors": []
+    }
+  },
+  "unprobed_tools": [
+    {
+      "tool": "ack_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "nak_distribution",
+      "rationale": "Mutating \u2014 changes distribution state."
+    },
+    {
+      "tool": "send_fin_message",
+      "rationale": "Mutating \u2014 would emit real outbound MT messages."
+    },
+    {
+      "tool": "send_interact_message",
+      "rationale": "Mutating \u2014 would emit real outbound MX messages."
+    }
+  ],
+  "coverage": {
+    "exposed_tools": 10,
+    "total_endpoints_in_spec": 43,
+    "raw_coverage_pct": 23.3,
+    "fileact_endpoints_excluded": 8,
+    "adjusted_total_endpoints": 35,
+    "adjusted_coverage_pct": 28.6,
+    "note": "FileAct (8 endpoints) is intentionally excluded \u2014 see ADR-002. The remaining gap is operational/reporting endpoints (delivery reports, archives, exports, transmission reports, batch) not in v1 scope."
+  }
+}

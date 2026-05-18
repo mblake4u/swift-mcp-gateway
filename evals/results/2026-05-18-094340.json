@@ -1,0 +1,1929 @@
+{
+  "timestamp_utc": "2026-05-18-094340",
+  "models": [
+    "claude-opus-4-5-20251101",
+    "claude-sonnet-4-5-20250929",
+    "claude-haiku-4-5-20251001"
+  ],
+  "results": [
+    {
+      "case_id": "ts-001",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2161.0550000000003,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-002",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2080.1440000000002,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-003",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123-def"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1686.08,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-004",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2152.4770000000003,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-005",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-001"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2287.857,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-006",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456",
+        "reason": "duplicate"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1842.9260000000002,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-007",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-002",
+        "reason": "format wasn't supported"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2099.54,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-008",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_messages",
+      "actual_tool": "download_fin_message",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1738.646,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-009",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1651.061,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-010",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-003"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1933.351,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-011",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 6553.397999999999,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-012",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "download_interact_message",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1895.7939999999999,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-013",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "download_interact_messages",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2015.1390000000001,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-014",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_message",
+      "actual_tool": "download_interact_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-789"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1569.575,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-015",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 5394.318,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-016",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 5730.555,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-017",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 8598.674,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-018",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "limit": 50
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3630.573,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-001",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": {
+        "limit": 50
+      },
+      "actual_args": {
+        "limit": 50
+      },
+      "strict_arg_match": {
+        "limit": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1433.981,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-002",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1949.1609999999998,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-003",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1584.932,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-004",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-456"
+      },
+      "actual_args": {
+        "distribution_id": "dst-456",
+        "reason": "malformed payload"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": {
+        "reason": {
+          "verdict": 1,
+          "reasoning": "The populated value 'malformed payload' directly matches the user's stated reason and indicates the payload was malformed as required by the rubric."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 2009.801,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-005",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_fin_message",
+      "actual_tool": "send_fin_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX"
+      },
+      "actual_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX",
+        "payload": "{1:F01CITIUSXXAXXX0000000000}{2:I103BARCGB22XXXXN}{4::20:REF-2026-001:32A:260501USD1000,00-}"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "message_type": true,
+        "sender": true,
+        "receiver": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value exactly matches the MT103 block structure specified in the user's request, containing all three blocks {1:...}{2:...}{4:...} with identical content."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 3030.5330000000004,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-006",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_interact_message",
+      "actual_tool": "send_interact_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift"
+      },
+      "actual_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift",
+        "payload": "<Document><FIToFICstmrCdtTrf/></Document>"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "service_code": true,
+        "message_type": true,
+        "requestor": true,
+        "responder": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value exactly matches the XML Document/FIToFICstmrCdtTrf wrapper structure specified in the user's request and rubric."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 2959.811,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-001",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 4047.3540000000003,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-002",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 6604.309,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-003",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 4006.234,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-004",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 4031.7410000000004,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-005",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 5842.082,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-006",
+      "model": "claude-opus-4-5-20251101",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 9620.106,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-001",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1586.201,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1726,
+      "error": null
+    },
+    {
+      "case_id": "ts-002",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1793.238,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-003",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123-def"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2018.989,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-004",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1777.43,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-005",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-001"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1943.313,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-006",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456",
+        "reason": "it's a duplicate"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2092.357,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-007",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-002",
+        "reason": "format wasn't supported"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2054.207,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-008",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_messages",
+      "actual_tool": "download_fin_message",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1700.2649999999999,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-009",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1847.323,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-010",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-003"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1925.364,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-011",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 3632.8740000000003,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-012",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "download_interact_messages",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2015.651,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-013",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "download_interact_messages",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1581.1360000000002,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-014",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_message",
+      "actual_tool": "download_interact_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-789"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1831.6399999999999,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-015",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 5839.479,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-016",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 3544.5060000000003,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-017",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 8913.774,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-018",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "limit": 50,
+        "offset": 0
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2655.955,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-001",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": {
+        "limit": 50
+      },
+      "actual_args": {
+        "limit": 50,
+        "offset": 0
+      },
+      "strict_arg_match": {
+        "limit": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1736.0500000000002,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-002",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2369.704,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-003",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1977.4640000000002,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-004",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-456"
+      },
+      "actual_args": {
+        "distribution_id": "dst-456",
+        "reason": "malformed payload"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": {
+        "reason": {
+          "verdict": 1,
+          "reasoning": "The value 'malformed payload' directly indicates the payload was malformed, matching the rubric exactly."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 1841.998,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-005",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_fin_message",
+      "actual_tool": "send_fin_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX"
+      },
+      "actual_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX",
+        "payload": "{1:F01CITIUSXXAXXX0000000000}{2:I103BARCGB22XXXXN}{4::20:REF-2026-001:32A:260501USD1000,00-}"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "message_type": true,
+        "sender": true,
+        "receiver": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value exactly matches the MT103 block structure specified in the user's request, containing all three blocks {1:...}{2:...}{4:...} with identical content."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 3338.648,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-006",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_interact_message",
+      "actual_tool": "send_interact_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift"
+      },
+      "actual_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift",
+        "payload": "<Document><FIToFICstmrCdtTrf/></Document>"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "service_code": true,
+        "message_type": true,
+        "requestor": true,
+        "responder": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value exactly matches the required XML Document/FIToFICstmrCdtTrf wrapper structure specified in the rubric."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 3101.985,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-001",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3635.952,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-002",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 6091.865000000001,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-003",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": "nak_distribution",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1944.733,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-004",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 5531.81,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-005",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 4977.254,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-006",
+      "model": "claude-sonnet-4-5-20250929",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3585.254,
+      "cache_read_input_tokens": 1726,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-001",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1471.041,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-002",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 997.398,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-003",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123-def"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1318.751,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-004",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1113.123,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-005",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-001"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 5488.3949999999995,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-006",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-456",
+        "reason": "Duplicate"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1182.599,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-007",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-002",
+        "reason": "format wasn't supported"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1226.363,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-008",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_messages",
+      "actual_tool": "download_fin_message",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1113.5600000000002,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-009",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc-123"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1030.398,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-010",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_fin_message",
+      "actual_tool": "download_fin_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "dst-003"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1221.727,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-011",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1638.749,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-012",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "download_interact_messages",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "abc"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1040.497,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-013",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_messages",
+      "actual_tool": "list_distributions",
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": {},
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1114.154,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-014",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "download_interact_message",
+      "actual_tool": "download_interact_message",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "distribution_id": "xyz-789"
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1032.09,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-015",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 2459.361,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-016",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "send_interact_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 1931.324,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-017",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "send_fin_message",
+      "actual_tool": null,
+      "tool_match": false,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": false,
+      "latency_ms": 2576.636,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "ts-018",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "tool_selection",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": {
+        "limit": 50,
+        "offset": 0
+      },
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1327.525,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-001",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "list_distributions",
+      "actual_tool": "list_distributions",
+      "tool_match": true,
+      "expected_args": {
+        "limit": 50
+      },
+      "actual_args": {
+        "limit": 50,
+        "offset": 0
+      },
+      "strict_arg_match": {
+        "limit": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1165.8329999999999,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-002",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "get_distribution",
+      "actual_tool": "get_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1143.134,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-003",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "ack_distribution",
+      "actual_tool": "ack_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "actual_args": {
+        "distribution_id": "dst-abc-123"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1158.393,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-004",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "nak_distribution",
+      "actual_tool": "nak_distribution",
+      "tool_match": true,
+      "expected_args": {
+        "distribution_id": "dst-456"
+      },
+      "actual_args": {
+        "distribution_id": "dst-456",
+        "reason": "malformed payload"
+      },
+      "strict_arg_match": {
+        "distribution_id": true
+      },
+      "freeform_verdicts": {
+        "reason": {
+          "verdict": 1,
+          "reasoning": "The populated value 'malformed payload' directly states that the payload was malformed, which exactly matches the rubric's requirement."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 1080.1019999999999,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-005",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_fin_message",
+      "actual_tool": "send_fin_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX"
+      },
+      "actual_args": {
+        "sender_reference": "REF-2026-001",
+        "message_type": "fin.103",
+        "sender": "CITIUSXXAXXX",
+        "receiver": "BARCGB22XXXX",
+        "payload": "{1:F01CITIUSXXAXXX0000000000}{2:I103BARCGB22XXXXN}{4::20:REF-2026-001:32A:260501USD1000,00-}"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "message_type": true,
+        "sender": true,
+        "receiver": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value contains the exact MT103 block structure with all three blocks ({1:...}{2:...}{4:...}) as specified in the user's request."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 1547.72,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "af-006",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "argument_fidelity",
+      "expected_tool": "send_interact_message",
+      "actual_tool": "send_interact_message",
+      "tool_match": true,
+      "expected_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift"
+      },
+      "actual_args": {
+        "sender_reference": "REF-X",
+        "service_code": "swift.cbprplus.02",
+        "message_type": "pacs.008.001.08",
+        "requestor": "cn=alice,o=citius,o=swift",
+        "responder": "cn=bob,o=barcgb22,o=swift",
+        "payload": "<Document><FIToFICstmrCdtTrf/></Document>"
+      },
+      "strict_arg_match": {
+        "sender_reference": true,
+        "service_code": true,
+        "message_type": true,
+        "requestor": true,
+        "responder": true
+      },
+      "freeform_verdicts": {
+        "payload": {
+          "verdict": 1,
+          "reasoning": "The populated value exactly matches the XML Document/FIToFICstmrCdtTrf wrapper structure specified in the rubric and user's question."
+        }
+      },
+      "overall_pass": true,
+      "latency_ms": 1694.816,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-001",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 1583.04,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-002",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3393.5879999999997,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-003",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3063.037,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-004",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3018.57,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-005",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 2558.074,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    },
+    {
+      "case_id": "neg-006",
+      "model": "claude-haiku-4-5-20251001",
+      "axis": "negative",
+      "expected_tool": null,
+      "actual_tool": null,
+      "tool_match": true,
+      "expected_args": null,
+      "actual_args": null,
+      "strict_arg_match": null,
+      "freeform_verdicts": null,
+      "overall_pass": true,
+      "latency_ms": 3749.815,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "error": null
+    }
+  ],
+  "summary": {
+    "claude-opus-4-5-20251101": {
+      "tool_selection": {
+        "pass": 12,
+        "total": 18,
+        "total_latency_ms": 55021.163,
+        "pass_rate": 0.6666666666666666,
+        "mean_latency_ms": 3056.731277777778
+      },
+      "argument_fidelity": {
+        "pass": 6,
+        "total": 6,
+        "total_latency_ms": 12968.219,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 2161.369833333333
+      },
+      "negative": {
+        "pass": 6,
+        "total": 6,
+        "total_latency_ms": 34151.826,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 5691.9710000000005
+      },
+      "__overall__": {
+        "pass": 24,
+        "total": 30,
+        "pass_rate": 0.8
+      }
+    },
+    "claude-sonnet-4-5-20250929": {
+      "tool_selection": {
+        "pass": 13,
+        "total": 18,
+        "total_latency_ms": 48753.702000000005,
+        "pass_rate": 0.7222222222222222,
+        "mean_latency_ms": 2708.539
+      },
+      "argument_fidelity": {
+        "pass": 6,
+        "total": 6,
+        "total_latency_ms": 14365.849000000002,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 2394.308166666667
+      },
+      "negative": {
+        "pass": 5,
+        "total": 6,
+        "total_latency_ms": 25766.868000000002,
+        "pass_rate": 0.8333333333333334,
+        "mean_latency_ms": 4294.478
+      },
+      "__overall__": {
+        "pass": 24,
+        "total": 30,
+        "pass_rate": 0.8
+      }
+    },
+    "claude-haiku-4-5-20251001": {
+      "tool_selection": {
+        "pass": 12,
+        "total": 18,
+        "total_latency_ms": 29283.691,
+        "pass_rate": 0.6666666666666666,
+        "mean_latency_ms": 1626.8717222222222
+      },
+      "argument_fidelity": {
+        "pass": 6,
+        "total": 6,
+        "total_latency_ms": 7789.998,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 1298.3329999999999
+      },
+      "negative": {
+        "pass": 6,
+        "total": 6,
+        "total_latency_ms": 17366.124,
+        "pass_rate": 1.0,
+        "mean_latency_ms": 2894.354
+      },
+      "__overall__": {
+        "pass": 24,
+        "total": 30,
+        "pass_rate": 0.8
+      }
+    }
+  }
+}

@@ -133,14 +133,17 @@ def nak_distribution(distribution_id: str, reason: str = "") -> dict:
 
 
 @mcp.tool()
-def download_fin_messages(distribution_id: str | None = None) -> dict:
-    """Download one or several FIN messages ready for distribution.
+def download_fin_messages(distribution_id: str) -> dict:
+    """Download FIN (MT) messages for a specific distribution.
+
+    The Swift API requires `distribution-id` as a query parameter on this
+    endpoint — calls without it return HTTP 400 (SwAP504).
 
     Args:
-        distribution_id: Optional distribution ID to filter to a single message.
+        distribution_id: The distribution ID whose FIN messages should be
+                         downloaded. Required (Swift API constraint).
     """
-    params = {"distribution-id": distribution_id} if distribution_id else None
-    return _get("/fin/messages", params)
+    return _get("/fin/messages", {"distribution-id": distribution_id})
 
 
 @mcp.tool()
@@ -188,14 +191,17 @@ def send_fin_message(
 
 
 @mcp.tool()
-def download_interact_messages(distribution_id: str | None = None) -> dict:
-    """Download one or several InterAct messages ready for distribution.
+def download_interact_messages(distribution_id: str) -> dict:
+    """Download InterAct (MX) messages for a specific distribution.
+
+    The Swift API requires `distribution-id` as a query parameter on this
+    endpoint — calls without it return HTTP 400 (SwAP504).
 
     Args:
-        distribution_id: Optional distribution ID to filter to a single message.
+        distribution_id: The distribution ID whose InterAct messages should be
+                         downloaded. Required (Swift API constraint).
     """
-    params = {"distribution-id": distribution_id} if distribution_id else None
-    return _get("/interact/messages", params)
+    return _get("/interact/messages", {"distribution-id": distribution_id})
 
 
 @mcp.tool()
